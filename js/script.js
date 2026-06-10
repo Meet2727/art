@@ -1,5 +1,7 @@
-```javascript id="m8y8kv"
+
 /* ==========================
+
+```javascript id="m8y8kv"
    LIKE BUTTON
 ========================== */
 
@@ -350,6 +352,7 @@ videoObserver.observe(video);
 
 /* ==========================
    PAGE LOADED
+   ```
 ========================== */
 
 window.addEventListener("load", () => {
@@ -359,4 +362,4 @@ console.log(
 );
 
 });
-```
+
