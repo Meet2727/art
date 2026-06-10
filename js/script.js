@@ -1,177 +1,123 @@
+/* ======================================
+   NEOART FUTURISTIC SCRIPT
+====================================== */
 
-/* ==================================
-   PAGE LOADED
-================================== */
+/* ======================================
+   PAGE LOADER
+====================================== */
 
 window.addEventListener("load", () => {
-    console.log("ArtGram Loaded Successfully");
+
+    document.body.classList.add("loaded");
+
+    console.log("NeoArt Initialized");
+
 });
 
-/* ==================================
-   LIKE BUTTON SYSTEM
-================================== */
+/* ======================================
+   SMOOTH SCROLL
+====================================== */
 
-const likeButtons = document.querySelectorAll(".like-btn");
+document
+.querySelectorAll('a[href^="#"]')
+.forEach(anchor => {
 
-likeButtons.forEach(button => {
+    anchor.addEventListener("click", e => {
 
-    button.addEventListener("click", () => {
+        e.preventDefault();
 
-        const icon = button.querySelector("i");
+        const target =
+        document.querySelector(
+        anchor.getAttribute("href")
+        );
 
-        if(icon.classList.contains("far")){
+        if(target){
 
-            icon.classList.remove("far");
-            icon.classList.add("fas");
+            target.scrollIntoView({
+                behavior:"smooth"
+            });
 
-            button.style.color = "#ff4d6d";
-            button.innerHTML =
-            '<i class="fas fa-heart"></i> Liked';
-
-        }else{
-
-            icon.classList.remove("fas");
-            icon.classList.add("far");
-
-            button.style.color = "#fff";
-            button.innerHTML =
-            '<i class="far fa-heart"></i> Like';
         }
 
     });
 
 });
 
-/* ==================================
-   SEARCH POSTS
-================================== */
+/* ======================================
+   ANIMATED COUNTERS
+====================================== */
 
-const searchInput =
-document.querySelector(".search-box input");
+const counters =
+document.querySelectorAll(".stat-card h2");
 
-if(searchInput){
+const counterObserver =
+new IntersectionObserver(entries => {
 
-searchInput.addEventListener("keyup", () => {
+entries.forEach(entry => {
 
-    const value =
-    searchInput.value.toLowerCase();
+if(entry.isIntersecting){
 
-    const posts =
-    document.querySelectorAll(".post");
+const counter =
+entry.target;
 
-    posts.forEach(post => {
+const target =
+parseInt(
+counter.innerText.replace(/\D/g,'')
+);
 
-        const text =
-        post.innerText.toLowerCase();
+let current = 0;
 
-        if(text.includes(value)){
-            post.style.display = "block";
-        }else{
-            post.style.display = "none";
-        }
+const update = () => {
 
-    });
+current += Math.ceil(target/80);
 
-});
+if(current > target){
 
-}
-
-/* ==================================
-   PROFILE EDIT
-================================== */
-
-const editBtn =
-document.getElementById("editProfileBtn");
-
-if(editBtn){
-
-editBtn.addEventListener("click", () => {
-
-    const name =
-    prompt("Enter Artist Name");
-
-    if(name){
-
-        const profileTitles =
-        document.querySelectorAll(
-        ".profile-info h3, .profile-card h3"
-        );
-
-        profileTitles.forEach(title => {
-            title.innerText = name;
-        });
-
-        alert("Profile Updated!");
-    }
-
-});
+current = target;
 
 }
 
-/* ==================================
-   CONTACT FORM
-================================== */
+const suffix =
+counter.innerText.includes("K")
+? "K+"
+: counter.innerText.includes("+")
+? "+"
+: "";
 
-const contactForm =
-document.getElementById("contactForm");
+counter.innerText =
+current + suffix;
 
-if(contactForm){
+if(current < target){
 
-contactForm.addEventListener("submit", e => {
-
-    e.preventDefault();
-
-    alert(
-    "Thank you! Your message has been sent."
-    );
-
-    contactForm.reset();
-
-});
+requestAnimationFrame(update);
 
 }
 
-/* ==================================
-   NEWSLETTER
-================================== */
+};
 
-const newsletterBtn =
-document.querySelector(".newsletter button");
+update();
 
-if(newsletterBtn){
-
-newsletterBtn.addEventListener("click", () => {
-
-    const email =
-    document.querySelector(
-    ".newsletter input"
-    ).value;
-
-    if(email){
-
-        alert(
-        "Subscribed Successfully!"
-        );
-
-    }else{
-
-        alert(
-        "Please enter an email."
-        );
-
-    }
-
-});
+counterObserver.unobserve(counter);
 
 }
 
-/* ==================================
-   LIGHTBOX
-================================== */
+});
 
-const galleryImages =
+},{threshold:.5});
+
+counters.forEach(counter => {
+
+counterObserver.observe(counter);
+
+});
+
+/* ======================================
+   IMAGE LIGHTBOX
+====================================== */
+
+const images =
 document.querySelectorAll(
-".gallery-grid img, .post-image"
+".art-card img"
 );
 
 const lightbox =
@@ -179,20 +125,22 @@ document.createElement("div");
 
 lightbox.id = "lightbox";
 
-lightbox.innerHTML =
-'<img id="lightbox-img">';
+lightbox.innerHTML = `
+<img id="lightbox-img">
+<span id="close-lightbox">&times;</span>
+`;
 
 document.body.appendChild(lightbox);
 
-galleryImages.forEach(img => {
+images.forEach(image => {
 
-img.addEventListener("click", () => {
+image.addEventListener("click", () => {
 
     lightbox.classList.add("active");
 
-    document.getElementById(
-    "lightbox-img"
-    ).src = img.src;
+    document
+    .getElementById("lightbox-img")
+    .src = image.src;
 
 });
 
@@ -200,13 +148,13 @@ img.addEventListener("click", () => {
 
 lightbox.addEventListener("click", () => {
 
-    lightbox.classList.remove("active");
+lightbox.classList.remove("active");
 
 });
 
-/* ==================================
+/* ======================================
    LIGHTBOX STYLE
-================================== */
+====================================== */
 
 const lightboxStyle =
 document.createElement("style");
@@ -214,26 +162,58 @@ document.createElement("style");
 lightboxStyle.innerHTML = `
 
 #lightbox{
+
 position:fixed;
+
 top:0;
 left:0;
+
 width:100%;
 height:100%;
-background:rgba(0,0,0,.95);
+
+background:
+rgba(0,0,0,.95);
+
 display:none;
+
 justify-content:center;
 align-items:center;
+
 z-index:999999;
+
 }
 
 #lightbox.active{
+
 display:flex;
+
 }
 
 #lightbox img{
+
 max-width:90%;
 max-height:90%;
-border-radius:15px;
+
+border-radius:20px;
+
+box-shadow:
+0 0 40px #00d4ff;
+
+}
+
+#close-lightbox{
+
+position:absolute;
+
+top:20px;
+right:40px;
+
+font-size:50px;
+
+color:white;
+
+cursor:pointer;
+
 }
 
 `;
@@ -242,40 +222,52 @@ document.head.appendChild(
 lightboxStyle
 );
 
-/* ==================================
-   SMOOTH SCROLL
-================================== */
+/* ======================================
+   SCROLL REVEAL
+====================================== */
 
-document
-.querySelectorAll(
-'a[href^="#"]'
-)
-.forEach(anchor => {
+const revealElements =
+document.querySelectorAll(
+'.art-card, .artist-card, .reel-card, .testimonial-card'
+);
 
-anchor.addEventListener("click", e => {
+const revealObserver =
+new IntersectionObserver(entries => {
 
-    e.preventDefault();
+entries.forEach(entry => {
 
-    const target =
-    document.querySelector(
-    anchor.getAttribute("href")
-    );
+if(entry.isIntersecting){
 
-    if(target){
+entry.target.style.opacity = 1;
 
-        target.scrollIntoView({
-            behavior:"smooth"
-        });
+entry.target.style.transform =
+'translateY(0px)';
 
-    }
+}
 
 });
 
+},{
+threshold:.15
 });
 
-/* ==================================
-   REEL AUTOPLAY
-================================== */
+revealElements.forEach(el => {
+
+el.style.opacity = 0;
+
+el.style.transform =
+'translateY(50px)';
+
+el.style.transition =
+'all .8s ease';
+
+revealObserver.observe(el);
+
+});
+
+/* ======================================
+   REELS AUTO PLAY
+====================================== */
 
 const videos =
 document.querySelectorAll("video");
@@ -285,21 +277,21 @@ new IntersectionObserver(entries => {
 
 entries.forEach(entry => {
 
-    if(entry.isIntersecting){
+if(entry.isIntersecting){
 
-        entry.target.play()
-        .catch(() => {});
+entry.target.play()
+.catch(() => {});
 
-    }else{
+}else{
 
-        entry.target.pause();
+entry.target.pause();
 
-    }
+}
 
 });
 
 },{
-threshold:.5
+threshold:.6
 });
 
 videos.forEach(video => {
@@ -308,115 +300,103 @@ videoObserver.observe(video);
 
 });
 
-/* ==================================
-   FADE IN ANIMATION
-================================== */
+/* ======================================
+   FOLLOW BUTTONS
+====================================== */
 
-const animatedElements =
+const followButtons =
 document.querySelectorAll(
-'.post, .gallery-grid img, .reel-card, .profile-card'
+'.artist-card button'
 );
 
-const observer =
-new IntersectionObserver(entries => {
+followButtons.forEach(btn => {
 
-entries.forEach(entry => {
+btn.addEventListener("click", () => {
 
-    if(entry.isIntersecting){
+if(btn.innerText === "Follow"){
 
-        entry.target.style.opacity = 1;
+btn.innerText = "Following";
 
-        entry.target.style.transform =
-        "translateY(0)";
+btn.style.background =
+"#00ff99";
 
-    }
+btn.style.boxShadow =
+"0 0 20px #00ff99";
 
-});
+}else{
 
-},{
-threshold:.2
-});
+btn.innerText = "Follow";
 
-animatedElements.forEach(el => {
+btn.style.background =
+"linear-gradient(45deg,#00d4ff,#0066ff)";
 
-el.style.opacity = 0;
+btn.style.boxShadow =
+"0 0 20px #00d4ff";
 
-el.style.transform =
-"translateY(40px)";
-
-el.style.transition =
-"all .8s ease";
-
-observer.observe(el);
-
-});
-
-/* ==================================
-   STORY HOVER
-================================== */
-
-const stories =
-document.querySelectorAll(".story");
-
-stories.forEach(story => {
-
-story.addEventListener(
-"mouseenter",
-() => {
-
-story.style.transform =
-"scale(1.08)";
-
-story.style.transition =
-".3s";
-
-});
-
-story.addEventListener(
-"mouseleave",
-() => {
-
-story.style.transform =
-"scale(1)";
+}
 
 });
 
 });
 
-/* ==================================
-   FOLLOW BUTTON
-================================== */
+/* ======================================
+   CONTACT FORM
+====================================== */
 
-const followBtn =
-document.querySelector(".follow-btn");
+const contactForm =
+document.getElementById(
+"contactForm"
+);
 
-if(followBtn){
+if(contactForm){
 
-followBtn.addEventListener(
+contactForm.addEventListener(
+"submit",
+e => {
+
+e.preventDefault();
+
+showNotification(
+"Message Sent Successfully!"
+);
+
+contactForm.reset();
+
+});
+
+}
+
+/* ======================================
+   NEWSLETTER
+====================================== */
+
+const newsletterBtn =
+document.querySelector(
+".newsletter button"
+);
+
+if(newsletterBtn){
+
+newsletterBtn.addEventListener(
 "click",
 () => {
 
-if(
-followBtn.innerText ===
-"Follow"
-){
+const email =
+document.querySelector(
+'.newsletter input'
+).value;
 
-followBtn.innerText =
-"Following";
+if(email){
 
-followBtn.style.background =
-"#22c55e";
+showNotification(
+"Subscription Successful!"
+);
 
-}else if(
-followBtn.innerText ===
-"Following"
-){
+}else{
 
-followBtn.innerText =
-"Follow";
-
-followBtn.style.background =
-"#ff4d6d";
+showNotification(
+"Enter Email Address"
+);
 
 }
 
@@ -424,65 +404,228 @@ followBtn.style.background =
 
 }
 
-/* ==================================
-   GALLERY IMAGE COUNTER
-================================== */
+/* ======================================
+   FUTURISTIC NOTIFICATION
+====================================== */
 
-const galleryCount =
-document.querySelectorAll(
-".gallery-grid img"
-).length;
+function showNotification(text){
 
-console.log(
-"Total Gallery Images:",
-galleryCount
+const notification =
+document.createElement("div");
+
+notification.className =
+"neo-notification";
+
+notification.innerText =
+text;
+
+document.body.appendChild(
+notification
 );
 
-/* ==================================
-   KEYBOARD SHORTCUTS
-================================== */
+setTimeout(() => {
+
+notification.classList.add(
+"show"
+);
+
+},100);
+
+setTimeout(() => {
+
+notification.classList.remove(
+"show"
+);
+
+setTimeout(() => {
+
+notification.remove();
+
+},500);
+
+},3000);
+
+}
+
+/* ======================================
+   NOTIFICATION STYLE
+====================================== */
+
+const notificationStyle =
+document.createElement("style");
+
+notificationStyle.innerHTML = `
+
+.neo-notification{
+
+position:fixed;
+
+bottom:30px;
+right:30px;
+
+background:
+linear-gradient(
+45deg,
+#00d4ff,
+#0066ff);
+
+padding:15px 25px;
+
+border-radius:12px;
+
+color:white;
+
+font-weight:bold;
+
+opacity:0;
+
+transform:
+translateY(30px);
+
+transition:.4s;
+
+z-index:999999;
+
+box-shadow:
+0 0 30px #00d4ff;
+
+}
+
+.neo-notification.show{
+
+opacity:1;
+
+transform:
+translateY(0);
+
+}
+
+`;
+
+document.head.appendChild(
+notificationStyle
+);
+
+/* ======================================
+   PARALLAX HERO
+====================================== */
+
+window.addEventListener(
+"mousemove",
+e => {
+
+const glow =
+document.querySelector(
+".glow-circle"
+);
+
+if(glow){
+
+const x =
+(e.clientX /
+window.innerWidth)
+* 30;
+
+const y =
+(e.clientY /
+window.innerHeight)
+* 30;
+
+glow.style.transform =
+`translate(${x}px, ${y}px)`;
+
+}
+
+});
+
+/* ======================================
+   FLOATING ART CARDS
+====================================== */
+
+const cards =
+document.querySelectorAll(
+'.art-card'
+);
+
+cards.forEach((card,index)=>{
+
+card.animate(
+
+[
+{
+transform:
+'translateY(0px)'
+},
+{
+transform:
+'translateY(-10px)'
+},
+{
+transform:
+'translateY(0px)'
+}
+],
+
+{
+duration:
+3000 + index * 400,
+
+iterations:
+Infinity
+
+}
+
+);
+
+});
+
+/* ======================================
+   ESC KEY CLOSE LIGHTBOX
+====================================== */
 
 document.addEventListener(
 "keydown",
 e => {
 
-if(e.key === "Escape"){
+if(
+e.key === "Escape"
+){
 
-    lightbox.classList.remove(
-    "active"
-    );
+lightbox.classList.remove(
+"active"
+);
 
 }
 
 });
 
-/* ==================================
-   RANDOM REEL TITLE EFFECT
-================================== */
+/* ======================================
+   RANDOM GLOW EFFECT
+====================================== */
 
-const reelTitles =
+setInterval(() => {
+
+const cards =
 document.querySelectorAll(
-".reel-card h3"
+'.art-card'
 );
 
-reelTitles.forEach(title => {
+const randomCard =
+cards[
+Math.floor(
+Math.random() *
+cards.length
+)
+];
 
-title.addEventListener(
-"mouseenter",
-() => {
+randomCard.style.boxShadow =
+"0 0 40px #00d4ff";
 
-title.style.color =
-"#ff4d6d";
+setTimeout(() => {
 
-});
+randomCard.style.boxShadow =
+"";
 
-title.addEventListener(
-"mouseleave",
-() => {
+},1000);
 
-title.style.color =
-"#fff";
-
-});
-
-});
+},3000);
