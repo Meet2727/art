@@ -353,3 +353,17 @@ footer{
 
 }
 
+/* new */
+
+.page-section{
+    padding:80px 40px;
+}
+
+.nav-icons a{
+    color:white;
+    text-decoration:none;
+}
+
+.nav-icons a:hover{
+    color:#ff4d6d;
+}
