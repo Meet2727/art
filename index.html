@@ -1,12 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-<title>ArtGram - Instagram Style Art Gallery</title>
+<title>NeoArt Gallery</title>
 
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet"
+href="css/style.css">
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap"
+rel="stylesheet">
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -15,452 +29,287 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
 <body>
 
-<!-- ==========================
-     HEADER
-========================== -->
+<!-- PARTICLES -->
 
-<header class="topbar">
+<div class="particles"></div>
+
+<!-- NAVBAR -->
+
+<header class="navbar">
 
 <div class="logo">
-ArtGram
+
+<i class="fa-solid fa-cube"></i>
+
+<span>NeoArt</span>
+
 </div>
 
-<div class="search-box">
-<input type="text" placeholder="Search artwork, artist, reels...">
-</div>
+<nav>
 
-<div class="nav-icons">
+<ul>
 
+<li>
 <a href="#home">
-<i class="fas fa-home"></i>
+Home
 </a>
+</li>
 
-<a href="#explore">
-<i class="fas fa-compass"></i>
+<li>
+<a href="#gallery">
+Gallery
 </a>
+</li>
 
+<li>
 <a href="#reels">
-<i class="fas fa-video"></i>
+Reels
 </a>
+</li>
 
-<a href="#likes">
-<i class="fas fa-heart"></i>
+<li>
+<a href="#artists">
+Artists
 </a>
+</li>
 
-<a href="#profile">
-<i class="fas fa-user"></i>
+<li>
+<a href="#contact">
+Contact
 </a>
+</li>
+
+</ul>
+
+</nav>
+
+<div class="nav-actions">
+
+<button class="neon-btn">
+
+Join Gallery
+
+</button>
 
 </div>
 
 </header>
 
-<!-- ==========================
-     HERO
-========================== -->
+<!-- HERO -->
 
-<section id="home" class="hero">
+<section
+id="home"
+class="hero">
 
 <div class="hero-content">
 
 <h1>
-Discover Amazing Art
+
+Future of
+Digital Art
+
 </h1>
 
 <p>
-Explore paintings, photography,
-digital art and video reels from
-artists around the world.
+
+Explore futuristic creations,
+AI artwork, digital paintings,
+3D masterpieces and immersive
+visual experiences.
+
 </p>
 
-<a href="#explore" class="hero-btn">
-Explore Collection
+<div class="hero-buttons">
+
+<a href="#gallery"
+class="primary-btn">
+
+Explore Art
+
+</a>
+
+<a href="#artists"
+class="secondary-btn">
+
+MVP Artists
+
 </a>
 
 </div>
 
-</section>
-
-<!-- ==========================
-     STORIES
-========================== -->
-
-<section class="stories">
-
-<div class="story">
-<img src="assets/images/story1.jpg">
-<span>MVP</span>
 </div>
 
-<div class="story">
-<img src="assets/images/story2.jpg">
-<span>Kalu</span>
-</div>
+<div class="hero-card">
 
-<div class="story">
-<img src="assets/images/story3.jpg">
-<span>Sophia</span>
-</div>
-
-<div class="story">
-<img src="assets/images/story4.jpg">
-<span>Zeel</span>
-</div>
-
-<div class="story">
-<img src="assets/images/story5.jpg">
-<span>Olivia</span>
-</div>
-
-<div class="story">
-<img src="assets/images/story6.jpg">
-<span>Lucas</span>
-</div>
-
-<div class="story">
-<img src="assets/images/story7.jpg">
-<span>Emaa</span>
-</div>
-
-</section>
-
-<!-- ==========================
-     MAIN CONTENT
-========================== -->
-
-<main class="container">
-
-<!-- ==========================
-     FEED
-========================== -->
-
-<section class="feed">
-
-<!-- POST 1 -->
-
-<div class="post">
-
-<div class="post-header">
-
-<img src="assets/images/profile1.jpg">
-
-<div>
-
-<h4>MVP Art Studio</h4>
-
-<p>Ahmedabad, India</p>
-
-</div>
-
-</div>
+<div class="glow-circle"></div>
 
 <img
-class="post-image"
-src="assets/images/art1.jpg">
-
-<div class="actions">
-
-<button class="like-btn">
-<i class="far fa-heart"></i>
-Like
-</button>
-
-<button>
-<i class="far fa-comment"></i>
-Comment
-</button>
-
-<button>
-<i class="far fa-paper-plane"></i>
-Share
-</button>
-
-</div>
-
-<div class="caption">
-
-<strong>MVP Art Studio</strong>
-
-Abstract acrylic artwork inspired by
-modern architecture.
-
-</div>
-
-</div>
-
-<!-- POST 2 -->
-
-<div class="post">
-
-<div class="post-header">
-
-<img src="assets/images/profile2.jpg">
-
-<div>
-
-<h4>Michael Lee</h4>
-
-<p>London</p>
-
-</div>
-
-</div>
-
-<img
-class="post-image"
-src="assets/images/art2.jpg">
-
-<div class="actions">
-
-<button class="like-btn">
-<i class="far fa-heart"></i>
-Like
-</button>
-
-<button>
-<i class="far fa-comment"></i>
-Comment
-</button>
-
-<button>
-<i class="far fa-paper-plane"></i>
-Share
-</button>
-
-</div>
-
-<div class="caption">
-
-<strong>Michael Lee</strong>
-
-Digital surrealism collection 2026.
-
-</div>
-
-</div>
-
-<!-- POST 3 -->
-
-<div class="post">
-
-<div class="post-header">
-
-<img src="assets/images/profile3.jpg">
-
-<div>
-
-<h4>Sophia Arts</h4>
-
-<p>Paris</p>
-
-</div>
-
-</div>
-
-<img
-class="post-image"
-src="assets/images/art3.jpg">
-
-<div class="actions">
-
-<button class="like-btn">
-<i class="far fa-heart"></i>
-Like
-</button>
-
-<button>
-<i class="far fa-comment"></i>
-Comment
-</button>
-
-<button>
-<i class="far fa-paper-plane"></i>
-Share
-</button>
-
-</div>
-
-<div class="caption">
-
-<strong>Sophia Arts</strong>
-
-Landscape photography series.
-
-</div>
-
-</div>
-
-    <!-- ==========================
-     POST 4
-========================== -->
-
-<div class="post">
-
-<div class="post-header">
-
-<img src="assets/images/profile4.jpg">
-
-<div>
-<h4>Alex Creative</h4>
-<p>New York</p>
-</div>
-
-</div>
-
-<img
-class="post-image"
-src="assets/images/art4.jpg">
-
-<div class="actions">
-
-<button class="like-btn">
-<i class="far fa-heart"></i>
-Like
-</button>
-
-<button>
-<i class="far fa-comment"></i>
-Comment
-</button>
-
-<button>
-<i class="far fa-paper-plane"></i>
-Share
-</button>
-
-</div>
-
-<div class="caption">
-
-<strong>Alex Creative</strong>
-
-Modern geometric artwork collection.
-
-</div>
+src="assets/images/hero-art.png"
+alt="Art">
 
 </div>
 
 </section>
 
-<!-- ==========================
-     SIDEBAR
-========================== -->
+<!-- STATS -->
 
-<aside class="sidebar">
+<section class="stats">
 
-<div class="profile-card">
+<div class="stat-card">
 
-<img
-src="assets/images/profile-main.jpg">
+<h2>25K+</h2>
 
-<h3>Your Gallery</h3>
-
-<p>Artist & Creator</p>
-
-<button
-class="follow-btn"
-id="editProfileBtn">
-
-Edit Profile
-
-</button>
+<p>Artworks</p>
 
 </div>
 
-<div class="stats">
+<div class="stat-card">
 
-<div>
-<h3>72</h3>
-<p>Posts</p>
-</div>
+<h2>8K+</h2>
 
-<div>
-<h3>12K</h3>
-<p>Followers</p>
-</div>
-
-<div>
-<h3>207</h3>
-<p>Following</p>
-</div>
+<p>Artists</p>
 
 </div>
 
-<div class="video-card">
+<div class="stat-card">
 
-<h3>Featured Reel</h3>
+<h2>100K+</h2>
 
-<video controls>
-
-<source
-src="assets/videos/reel1.mp4"
-type="video/mp4">
-
-</video>
+<p>Members</p>
 
 </div>
 
-</aside>
+<div class="stat-card">
 
-</main>
+<h2>50+</h2>
 
-<!-- ==========================
-     EXPLORE SECTION
-========================== -->
+<p>Countries</p>
+
+</div>
+
+</section>
+
+<!-- GALLERY -->
 
 <section
-id="explore"
-class="page-section">
+id="gallery"
+class="gallery">
 
-<h2>Explore Art</h2>
+<h2 class="section-title">
+
+Featured Artworks
+
+</h2>
 
 <div class="gallery-grid">
 
-<img src="assets/images/art1.jpg">
+<div class="art-card">
 
-<img src="assets/images/art2.jpg">
+<img
+src="assets/images/art1.jpg">
 
-<img src="assets/images/art3.jpg">
+<div class="art-overlay">
 
-<img src="assets/images/art4.jpg">
+<h3>Neon Future</h3>
 
-<img src="assets/images/art5.jpg">
+<p>Digital Concept Art</p>
 
-<img src="assets/images/art6.jpg">
+</div>
 
-<img src="assets/images/art7.jpg">
+</div>
 
-<img src="assets/images/art8.jpg">
+<div class="art-card">
 
-<img src="assets/images/art1.jpg">
+<img
+src="assets/images/art2.jpg">
 
-<img src="assets/images/art2.jpg">
+<div class="art-overlay">
 
-<img src="assets/images/art3.jpg">
+<h3>Cyber Dreams</h3>
 
-<img src="assets/images/art4.jpg">
+<p>3D Illustration</p>
 
-<img src="assets/images/art5.jpg">
+</div>
 
-<img src="assets/images/art6.jpg">
+</div>
 
-<img src="assets/images/art7.jpg">
+<div class="art-card">
 
-<img src="assets/images/art8.jpg">
+<img
+src="assets/images/art3.jpg">
+
+<div class="art-overlay">
+
+<h3>AI Universe</h3>
+
+<p>Generated Artwork</p>
+
+</div>
+
+</div>
+
+<div class="art-card">
+
+<img
+src="assets/images/art4.jpg">
+
+<div class="art-overlay">
+
+<h3>Blue Matrix</h3>
+
+<p>Digital Design</p>
+
+</div>
+
+</div>
+
+<div class="art-card">
+
+<img
+src="assets/images/art5.jpg">
+
+<div class="art-overlay">
+
+<h3>Quantum Light</h3>
+
+<p>Visual Experiment</p>
+
+</div>
+
+</div>
+
+<div class="art-card">
+
+<img
+src="assets/images/art6.jpg">
+
+<div class="art-overlay">
+
+<h3>Cyber City</h3>
+
+<p>Future Architecture</p>
+
+</div>
+
+</div>
 
 </div>
 
 </section>
 
-<!-- ==========================
+     <!-- ==========================
      REELS SECTION
 ========================== -->
 
 <section
 id="reels"
-class="page-section">
+class="reels">
 
-<h2>Art Reels</h2>
+<h2 class="section-title">
+
+Neo Reels
+
+</h2>
 
 <div class="reels-container">
 
@@ -477,9 +326,17 @@ type="video/mp4">
 
 </video>
 
+<div class="reel-info">
+
 <h3>
-Abstract Painting Process
+Future Art Creation
 </h3>
+
+<p>
+Digital Timelapse
+</p>
+
+</div>
 
 </div>
 
@@ -496,9 +353,17 @@ type="video/mp4">
 
 </video>
 
+<div class="reel-info">
+
 <h3>
-Digital Art Timelapse
+AI Design Process
 </h3>
+
+<p>
+Creative Workflow
+</p>
+
+</div>
 
 </div>
 
@@ -515,94 +380,251 @@ type="video/mp4">
 
 </video>
 
+<div class="reel-info">
+
 <h3>
-Photography Behind Scenes
+Cyber Painting
 </h3>
 
-</div>
-
-</div>
-
-</section>
-
-<!-- ==========================
-     LIKES SECTION
-========================== -->
-
-<section
-id="likes"
-class="page-section">
-
-<h2>Liked Artworks</h2>
-
 <p>
-Your liked artworks will appear here.
+Neon Art Series
 </p>
 
-<div class="gallery-grid">
+</div>
 
-<img src="assets/images/art2.jpg">
-
-<img src="assets/images/art4.jpg">
-
-<img src="assets/images/art6.jpg">
-
-<img src="assets/images/art8.jpg">
+</div>
 
 </div>
 
 </section>
+
 <!-- ==========================
-     PROFILE SECTION
+     ARTISTS
 ========================== -->
 
 <section
-id="profile"
-class="page-section">
+id="artists"
+class="artists">
 
-<h2>Artist Profile</h2>
+<h2 class="section-title">
 
-<div class="profile-page">
+Featured Artists
+
+</h2>
+
+<div class="artists-grid">
+
+<div class="artist-card">
 
 <img
-src="assets/images/profile-main.jpg"
-class="profile-large">
+src="assets/images/artist1.jpg">
 
-<div class="profile-info">
+<div class="artist-info">
 
-<h3>Your Gallery</h3>
-
-<p>
-Contemporary Artist • Photographer • Creator
-</p>
+<h3>
+Emma Johnson
+</h3>
 
 <p>
-Welcome to my digital gallery where I
-share paintings, photography and
-creative visual stories.
+Digital Artist
 </p>
 
-<button id="editProfileBtn">
-Edit Profile
+<button class="neon-btn">
+Follow
 </button>
 
 </div>
 
 </div>
 
+<div class="artist-card">
+
+<img
+src="assets/images/artist2.jpg">
+
+<div class="artist-info">
+
+<h3>
+Michael Lee
+</h3>
+
+<p>
+3D Designer
+</p>
+
+<button class="neon-btn">
+Follow
+</button>
+
+</div>
+
+</div>
+
+<div class="artist-card">
+
+<img
+src="assets/images/artist3.jpg">
+
+<div class="artist-info">
+
+<h3>
+Sophia Carter
+</h3>
+
+<p>
+Photographer
+</p>
+
+<button class="neon-btn">
+Follow
+</button>
+
+</div>
+
+</div>
+
+<div class="artist-card">
+
+<img
+src="assets/images/artist4.jpg">
+
+<div class="artist-info">
+
+<h3>
+Alex Morgan
+</h3>
+
+<p>
+Concept Artist
+</p>
+
+<button class="neon-btn">
+Follow
+</button>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
 <!-- ==========================
-     CONTACT SECTION
+     TESTIMONIALS
+========================== -->
+
+<section class="testimonials">
+
+<h2 class="section-title">
+
+What Creators Say
+
+</h2>
+
+<div class="testimonial-grid">
+
+<div class="testimonial-card">
+
+<p>
+
+"NeoArt has completely changed
+how I showcase my artwork."
+
+</p>
+
+<h4>
+— Emma Johnson
+</h4>
+
+</div>
+
+<div class="testimonial-card">
+
+<p>
+
+"The futuristic design makes
+my portfolio stand out."
+
+</p>
+
+<h4>
+— Michael Lee
+</h4>
+
+</div>
+
+<div class="testimonial-card">
+
+<p>
+
+"The reels feature is amazing
+for sharing creative processes."
+
+</p>
+
+<h4>
+— Sophia Carter
+</h4>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================
+     NEWSLETTER
+========================== -->
+
+<section class="newsletter">
+
+<h2>
+
+Stay Connected
+
+</h2>
+
+<p>
+
+Get updates on exhibitions,
+artists and new digital art.
+
+</p>
+
+<div class="newsletter-form">
+
+<input
+type="email"
+placeholder="Enter your email">
+
+<button class="neon-btn">
+
+Subscribe
+
+</button>
+
+</div>
+
+</section>
+
+<!-- ==========================
+     CONTACT
 ========================== -->
 
 <section
 id="contact"
-class="page-section">
+class="contact">
 
-<h2>Contact</h2>
+<h2 class="section-title">
 
-<form id="contactForm">
+Contact Us
+
+</h2>
+
+<form
+id="contactForm"
+class="contact-form">
 
 <input
 type="text"
@@ -615,10 +637,12 @@ placeholder="Email Address"
 required>
 
 <textarea
-placeholder="Message"
-rows="6"></textarea>
+rows="6"
+placeholder="Your Message"></textarea>
 
-<button type="submit">
+<button
+type="submit"
+class="neon-btn">
 
 Send Message
 
@@ -629,56 +653,34 @@ Send Message
 </section>
 
 <!-- ==========================
-     NEWSLETTER
-========================== -->
-
-<section class="newsletter">
-
-<h2>
-Subscribe for New Art Releases
-</h2>
-
-<p>
-Get updates on exhibitions,
-new collections and reels.
-</p>
-
-<div class="newsletter-box">
-
-<input
-type="email"
-placeholder="Enter your email">
-
-<button>
-Subscribe
-</button>
-
-</div>
-
-</section>
-
-<!-- ==========================
      FOOTER
 ========================== -->
 
 <footer>
 
-<div class="footer-content">
+<div class="footer-grid">
 
 <div>
 
-<h3>ArtGram</h3>
+<h3>
+NeoArt
+</h3>
 
 <p>
-Instagram-style Art Gallery Platform
-for Artists & Creators.
+
+The future of digital art
+communities and creative
+showcases.
+
 </p>
 
 </div>
 
 <div>
 
-<h3>Quick Links</h3>
+<h3>
+Quick Links
+</h3>
 
 <ul>
 
@@ -689,8 +691,8 @@ Home
 </li>
 
 <li>
-<a href="#explore">
-Explore
+<a href="#gallery">
+Gallery
 </a>
 </li>
 
@@ -701,8 +703,14 @@ Reels
 </li>
 
 <li>
-<a href="#profile">
-Profile
+<a href="#artists">
+Artists
+</a>
+</li>
+
+<li>
+<a href="#contact">
+Contact
 </a>
 </li>
 
@@ -712,9 +720,11 @@ Profile
 
 <div>
 
-<h3>Follow Us</h3>
+<h3>
+Follow Us
+</h3>
 
-<div class="social-icons">
+<div class="social-links">
 
 <a href="#">
 <i class="fab fa-instagram"></i>
@@ -729,7 +739,7 @@ Profile
 </a>
 
 <a href="#">
-<i class="fab fa-twitter"></i>
+<i class="fab fa-x-twitter"></i>
 </a>
 
 </div>
@@ -742,16 +752,12 @@ Profile
 
 <p class="copyright">
 
-© 2026 ArtGram.
+© 2026 NeoArt Gallery.
 All Rights Reserved.
 
 </p>
 
 </footer>
-
-<!-- ==========================
-     SCRIPT
-========================== -->
 
 <script src="js/script.js"></script>
 
