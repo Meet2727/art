@@ -363,3 +363,29 @@ console.log(
 
 });
 
+/* ==========================
+   editBtn new
+========================== */
+
+const editBtn =
+document.getElementById("editProfileBtn");
+
+if(editBtn){
+
+editBtn.addEventListener("click", () => {
+
+const name = prompt(
+"Enter your artist name:"
+);
+
+if(name){
+
+document.querySelector(
+"#profile h3"
+).innerText = name;
+
+}
+
+});
+
+}
