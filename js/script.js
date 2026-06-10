@@ -1,9 +1,15 @@
 
-/* ==========================
+/* ==================================
+   PAGE LOADED
+================================== */
 
-```javascript id="m8y8kv"
-   LIKE BUTTON
-========================== */
+window.addEventListener("load", () => {
+    console.log("ArtGram Loaded Successfully");
+});
+
+/* ==================================
+   LIKE BUTTON SYSTEM
+================================== */
 
 const likeButtons = document.querySelectorAll(".like-btn");
 
@@ -19,32 +25,39 @@ likeButtons.forEach(button => {
             icon.classList.add("fas");
 
             button.style.color = "#ff4d6d";
+            button.innerHTML =
+            '<i class="fas fa-heart"></i> Liked';
 
         }else{
 
             icon.classList.remove("fas");
             icon.classList.add("far");
 
-            button.style.color = "white";
+            button.style.color = "#fff";
+            button.innerHTML =
+            '<i class="far fa-heart"></i> Like';
         }
 
     });
 
 });
 
-/* ==========================
-   SEARCH FILTER
-========================== */
+/* ==================================
+   SEARCH POSTS
+================================== */
 
-const searchInput = document.querySelector(".search-box input");
+const searchInput =
+document.querySelector(".search-box input");
 
 if(searchInput){
 
 searchInput.addEventListener("keyup", () => {
 
-    const value = searchInput.value.toLowerCase();
+    const value =
+    searchInput.value.toLowerCase();
 
-    const posts = document.querySelectorAll(".post");
+    const posts =
+    document.querySelectorAll(".post");
 
     posts.forEach(post => {
 
@@ -63,21 +76,189 @@ searchInput.addEventListener("keyup", () => {
 
 }
 
-/* ==========================
+/* ==================================
+   PROFILE EDIT
+================================== */
+
+const editBtn =
+document.getElementById("editProfileBtn");
+
+if(editBtn){
+
+editBtn.addEventListener("click", () => {
+
+    const name =
+    prompt("Enter Artist Name");
+
+    if(name){
+
+        const profileTitles =
+        document.querySelectorAll(
+        ".profile-info h3, .profile-card h3"
+        );
+
+        profileTitles.forEach(title => {
+            title.innerText = name;
+        });
+
+        alert("Profile Updated!");
+    }
+
+});
+
+}
+
+/* ==================================
+   CONTACT FORM
+================================== */
+
+const contactForm =
+document.getElementById("contactForm");
+
+if(contactForm){
+
+contactForm.addEventListener("submit", e => {
+
+    e.preventDefault();
+
+    alert(
+    "Thank you! Your message has been sent."
+    );
+
+    contactForm.reset();
+
+});
+
+}
+
+/* ==================================
+   NEWSLETTER
+================================== */
+
+const newsletterBtn =
+document.querySelector(".newsletter button");
+
+if(newsletterBtn){
+
+newsletterBtn.addEventListener("click", () => {
+
+    const email =
+    document.querySelector(
+    ".newsletter input"
+    ).value;
+
+    if(email){
+
+        alert(
+        "Subscribed Successfully!"
+        );
+
+    }else{
+
+        alert(
+        "Please enter an email."
+        );
+
+    }
+
+});
+
+}
+
+/* ==================================
+   LIGHTBOX
+================================== */
+
+const galleryImages =
+document.querySelectorAll(
+".gallery-grid img, .post-image"
+);
+
+const lightbox =
+document.createElement("div");
+
+lightbox.id = "lightbox";
+
+lightbox.innerHTML =
+'<img id="lightbox-img">';
+
+document.body.appendChild(lightbox);
+
+galleryImages.forEach(img => {
+
+img.addEventListener("click", () => {
+
+    lightbox.classList.add("active");
+
+    document.getElementById(
+    "lightbox-img"
+    ).src = img.src;
+
+});
+
+});
+
+lightbox.addEventListener("click", () => {
+
+    lightbox.classList.remove("active");
+
+});
+
+/* ==================================
+   LIGHTBOX STYLE
+================================== */
+
+const lightboxStyle =
+document.createElement("style");
+
+lightboxStyle.innerHTML = `
+
+#lightbox{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.95);
+display:none;
+justify-content:center;
+align-items:center;
+z-index:999999;
+}
+
+#lightbox.active{
+display:flex;
+}
+
+#lightbox img{
+max-width:90%;
+max-height:90%;
+border-radius:15px;
+}
+
+`;
+
+document.head.appendChild(
+lightboxStyle
+);
+
+/* ==================================
    SMOOTH SCROLL
-========================== */
+================================== */
 
 document
-.querySelectorAll('a[href^="#"]')
+.querySelectorAll(
+'a[href^="#"]'
+)
 .forEach(anchor => {
 
-anchor.addEventListener("click", function(e){
+anchor.addEventListener("click", e => {
 
     e.preventDefault();
 
     const target =
     document.querySelector(
-        this.getAttribute("href")
+    anchor.getAttribute("href")
     );
 
     if(target){
@@ -92,92 +273,49 @@ anchor.addEventListener("click", function(e){
 
 });
 
-/* ==========================
-   IMAGE LIGHTBOX
-========================== */
+/* ==================================
+   REEL AUTOPLAY
+================================== */
 
-const images =
+const videos =
+document.querySelectorAll("video");
+
+const videoObserver =
+new IntersectionObserver(entries => {
+
+entries.forEach(entry => {
+
+    if(entry.isIntersecting){
+
+        entry.target.play()
+        .catch(() => {});
+
+    }else{
+
+        entry.target.pause();
+
+    }
+
+});
+
+},{
+threshold:.5
+});
+
+videos.forEach(video => {
+
+videoObserver.observe(video);
+
+});
+
+/* ==================================
+   FADE IN ANIMATION
+================================== */
+
+const animatedElements =
 document.querySelectorAll(
-'.gallery-grid img, .post-image'
+'.post, .gallery-grid img, .reel-card, .profile-card'
 );
-
-const lightbox =
-document.createElement("div");
-
-lightbox.id = "lightbox";
-
-lightbox.innerHTML = `
-<img id="lightbox-img">
-`;
-
-document.body.appendChild(lightbox);
-
-images.forEach(image => {
-
-image.addEventListener("click", () => {
-
-    lightbox.classList.add("active");
-
-    document
-    .getElementById("lightbox-img")
-    .src = image.src;
-
-});
-
-});
-
-lightbox.addEventListener("click", () => {
-
-    lightbox.classList.remove("active");
-
-});
-
-/* ==========================
-   LIGHTBOX STYLE
-========================== */
-
-const style =
-document.createElement("style");
-
-style.innerHTML = `
-
-#lightbox{
-
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,.95);
-
-display:none;
-
-justify-content:center;
-align-items:center;
-
-z-index:99999;
-
-}
-
-#lightbox.active{
-display:flex;
-}
-
-#lightbox img{
-
-max-width:90%;
-max-height:90%;
-border-radius:15px;
-
-}
-
-`;
-
-document.head.appendChild(style);
-
-/* ==========================
-   FADE-IN ANIMATION
-========================== */
 
 const observer =
 new IntersectionObserver(entries => {
@@ -189,84 +327,42 @@ entries.forEach(entry => {
         entry.target.style.opacity = 1;
 
         entry.target.style.transform =
-        "translateY(0px)";
+        "translateY(0)";
+
     }
 
 });
 
+},{
+threshold:.2
 });
 
-const animateItems =
-document.querySelectorAll(
-'.post, .artist-card, .gallery-grid img'
-);
+animatedElements.forEach(el => {
 
-animateItems.forEach(item => {
+el.style.opacity = 0;
 
-item.style.opacity = 0;
+el.style.transform =
+"translateY(40px)";
 
-item.style.transform =
-'translateY(40px)';
+el.style.transition =
+"all .8s ease";
 
-item.style.transition =
-'all .8s ease';
-
-observer.observe(item);
+observer.observe(el);
 
 });
 
-/* ==========================
-   STATS COUNTER
-========================== */
-
-const counters =
-document.querySelectorAll(".stats h3");
-
-counters.forEach(counter => {
-
-const target =
-parseInt(
-counter.innerText.replace(/\D/g,'')
-);
-
-if(!target) return;
-
-let current = 0;
-
-const update = () => {
-
-current += Math.ceil(target/100);
-
-if(current > target){
-
-current = target;
-
-}
-
-counter.innerText = current;
-
-if(current < target){
-
-requestAnimationFrame(update);
-
-}
-
-};
-
-update();
-
-});
-
-/* ==========================
-   STORY HOVER EFFECT
-========================== */
+/* ==================================
+   STORY HOVER
+================================== */
 
 const stories =
 document.querySelectorAll(".story");
 
 stories.forEach(story => {
 
-story.addEventListener("mouseenter", () => {
+story.addEventListener(
+"mouseenter",
+() => {
 
 story.style.transform =
 "scale(1.08)";
@@ -276,7 +372,9 @@ story.style.transition =
 
 });
 
-story.addEventListener("mouseleave", () => {
+story.addEventListener(
+"mouseleave",
+() => {
 
 story.style.transform =
 "scale(1)";
@@ -285,18 +383,23 @@ story.style.transform =
 
 });
 
-/* ==========================
+/* ==================================
    FOLLOW BUTTON
-========================== */
+================================== */
 
 const followBtn =
 document.querySelector(".follow-btn");
 
 if(followBtn){
 
-followBtn.addEventListener("click", () => {
+followBtn.addEventListener(
+"click",
+() => {
 
-if(followBtn.innerText === "Follow"){
+if(
+followBtn.innerText ===
+"Follow"
+){
 
 followBtn.innerText =
 "Following";
@@ -304,7 +407,10 @@ followBtn.innerText =
 followBtn.style.background =
 "#22c55e";
 
-}else{
+}else if(
+followBtn.innerText ===
+"Following"
+){
 
 followBtn.innerText =
 "Follow";
@@ -318,74 +424,65 @@ followBtn.style.background =
 
 }
 
-/* ==========================
-   REEL AUTOPLAY ON VIEW
-========================== */
+/* ==================================
+   GALLERY IMAGE COUNTER
+================================== */
 
-const videos =
-document.querySelectorAll("video");
-
-const videoObserver =
-new IntersectionObserver(entries => {
-
-entries.forEach(entry => {
-
-if(entry.isIntersecting){
-
-entry.target.play();
-
-}else{
-
-entry.target.pause();
-
-}
-
-});
-
-},{threshold:.5});
-
-videos.forEach(video => {
-
-videoObserver.observe(video);
-
-});
-
-/* ==========================
-   PAGE LOADED
-   ```
-========================== */
-
-window.addEventListener("load", () => {
+const galleryCount =
+document.querySelectorAll(
+".gallery-grid img"
+).length;
 
 console.log(
-"ArtGram Loaded Successfully"
+"Total Gallery Images:",
+galleryCount
 );
 
-});
+/* ==================================
+   KEYBOARD SHORTCUTS
+================================== */
 
-/* ==========================
-   editBtn new
-========================== */
+document.addEventListener(
+"keydown",
+e => {
 
-const editBtn =
-document.getElementById("editProfileBtn");
+if(e.key === "Escape"){
 
-if(editBtn){
-
-editBtn.addEventListener("click", () => {
-
-const name = prompt(
-"Enter your artist name:"
-);
-
-if(name){
-
-document.querySelector(
-"#profile h3"
-).innerText = name;
+    lightbox.classList.remove(
+    "active"
+    );
 
 }
 
 });
 
-}
+/* ==================================
+   RANDOM REEL TITLE EFFECT
+================================== */
+
+const reelTitles =
+document.querySelectorAll(
+".reel-card h3"
+);
+
+reelTitles.forEach(title => {
+
+title.addEventListener(
+"mouseenter",
+() => {
+
+title.style.color =
+"#ff4d6d";
+
+});
+
+title.addEventListener(
+"mouseleave",
+() => {
+
+title.style.color =
+"#fff";
+
+});
+
+});
