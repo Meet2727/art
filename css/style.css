@@ -1,9 +1,7 @@
 
-/* =========================
-
-```css
+/* ==================================
    GLOBAL
-========================= */
+================================== */
 
 *{
     margin:0;
@@ -12,36 +10,44 @@
 }
 
 :root{
-    --bg:#121212;
-    --card:#1e1e1e;
+    --bg:#0f0f0f;
+    --card:#1a1a1a;
     --border:#2d2d2d;
     --text:#ffffff;
-    --muted:#a0a0a0;
+    --muted:#b0b0b0;
     --accent:#ff4d6d;
+    --accent2:#ff7a18;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
+    font-family:Arial, Helvetica, sans-serif;
     background:var(--bg);
     color:var(--text);
-    font-family:Arial, Helvetica, sans-serif;
+    overflow-x:hidden;
 }
 
-/* =========================
-   TOP BAR
-========================= */
+/* ==================================
+   TOPBAR
+================================== */
 
 .topbar{
     position:sticky;
     top:0;
-    z-index:999;
+    z-index:9999;
+
     background:#000;
-    border-bottom:1px solid var(--border);
 
     display:flex;
     justify-content:space-between;
     align-items:center;
 
     padding:15px 30px;
+
+    border-bottom:1px solid var(--border);
 }
 
 .logo{
@@ -51,14 +57,12 @@ body{
 }
 
 .search-box{
-    flex:1;
-    max-width:500px;
-    margin:0 30px;
+    width:40%;
 }
 
 .search-box input{
     width:100%;
-    padding:12px;
+    padding:12px 18px;
     border:none;
     border-radius:30px;
     background:#222;
@@ -70,25 +74,82 @@ body{
     gap:20px;
 }
 
-.nav-icons i{
-    cursor:pointer;
+.nav-icons a{
+    color:white;
     font-size:20px;
     transition:.3s;
 }
 
-.nav-icons i:hover{
+.nav-icons a:hover{
     color:var(--accent);
+    transform:scale(1.1);
 }
 
-/* =========================
+/* ==================================
+   HERO
+================================== */
+
+.hero{
+    height:90vh;
+
+    background:
+    linear-gradient(
+    rgba(0,0,0,.6),
+    rgba(0,0,0,.6)),
+    url('../assets/images/banner.jpg');
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+}
+
+.hero-content{
+    max-width:700px;
+}
+
+.hero h1{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:20px;
+    color:#ddd;
+    margin-bottom:30px;
+}
+
+.hero-btn{
+    display:inline-block;
+    padding:15px 35px;
+
+    background:linear-gradient(
+    45deg,
+    var(--accent),
+    var(--accent2));
+
+    color:white;
+    text-decoration:none;
+
+    border-radius:40px;
+}
+
+/* ==================================
    STORIES
-========================= */
+================================== */
 
 .stories{
     display:flex;
     gap:20px;
+
     overflow-x:auto;
+
     padding:20px;
+
     border-bottom:1px solid var(--border);
 }
 
@@ -100,8 +161,11 @@ body{
 .story img{
     width:70px;
     height:70px;
+
     border-radius:50%;
+
     object-fit:cover;
+
     border:3px solid var(--accent);
 }
 
@@ -111,26 +175,31 @@ body{
     font-size:12px;
 }
 
-/* =========================
+/* ==================================
    MAIN LAYOUT
-========================= */
+================================== */
 
 .container{
     display:grid;
     grid-template-columns:2fr 1fr;
     gap:30px;
+
     padding:30px;
 }
 
-/* =========================
+/* ==================================
    POSTS
-========================= */
+================================== */
 
 .post{
     background:var(--card);
+
     border-radius:15px;
+
     overflow:hidden;
+
     margin-bottom:30px;
+
     border:1px solid var(--border);
 }
 
@@ -138,6 +207,7 @@ body{
     display:flex;
     align-items:center;
     gap:15px;
+
     padding:15px;
 }
 
@@ -150,14 +220,12 @@ body{
 
 .post-header p{
     color:var(--muted);
-    font-size:13px;
+    font-size:12px;
 }
 
 .post-image{
     width:100%;
     display:block;
-    max-height:700px;
-    object-fit:cover;
 }
 
 .actions{
@@ -167,11 +235,10 @@ body{
 }
 
 .actions button{
-    border:none;
     background:none;
+    border:none;
     color:white;
     cursor:pointer;
-    font-size:15px;
 }
 
 .actions button:hover{
@@ -183,9 +250,9 @@ body{
     line-height:1.6;
 }
 
-/* =========================
+/* ==================================
    SIDEBAR
-========================= */
+================================== */
 
 .sidebar{
     position:sticky;
@@ -196,9 +263,8 @@ body{
 .profile-card{
     background:var(--card);
     padding:20px;
-    border-radius:15px;
     text-align:center;
-    border:1px solid var(--border);
+    border-radius:15px;
 }
 
 .profile-card img{
@@ -208,61 +274,47 @@ body{
     object-fit:cover;
 }
 
-.profile-card h3{
-    margin-top:15px;
-}
-
-.profile-card p{
-    color:var(--muted);
-}
-
 .follow-btn{
     margin-top:15px;
-    border:none;
+
     background:var(--accent);
+
+    border:none;
+
     color:white;
+
     padding:12px 20px;
+
     border-radius:30px;
+
     cursor:pointer;
 }
 
-.follow-btn:hover{
-    opacity:.9;
-}
-
-/* =========================
-   STATS
-========================= */
-
 .stats{
     background:var(--card);
+
     margin-top:20px;
-    border-radius:15px;
-    border:1px solid var(--border);
+
+    padding:20px;
 
     display:flex;
     justify-content:space-around;
-    padding:20px;
+
+    border-radius:15px;
 }
 
 .stats h3{
     color:var(--accent);
 }
 
-.stats p{
-    color:var(--muted);
-}
-
-/* =========================
-   VIDEO CARD
-========================= */
-
 .video-card{
-    margin-top:20px;
     background:var(--card);
+
+    margin-top:20px;
+
     padding:20px;
+
     border-radius:15px;
-    border:1px solid var(--border);
 }
 
 .video-card video{
@@ -271,30 +323,41 @@ body{
     border-radius:12px;
 }
 
-/* =========================
-   TRENDING GALLERY
-========================= */
+/* ==================================
+   PAGE SECTIONS
+================================== */
 
-.gallery-section{
-    padding:40px;
+.page-section{
+    padding:80px 40px;
 }
 
-.gallery-section h2{
+.page-section h2{
     margin-bottom:30px;
+    text-align:center;
 }
+
+/* ==================================
+   GALLERY GRID
+================================== */
 
 .gallery-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
     gap:20px;
 }
 
 .gallery-grid img{
     width:100%;
     height:250px;
+
     object-fit:cover;
+
     border-radius:15px;
+
     cursor:pointer;
+
     transition:.4s;
 }
 
@@ -302,20 +365,217 @@ body{
     transform:scale(1.05);
 }
 
-/* =========================
-   FOOTER
-========================= */
+/* ==================================
+   REELS
+================================== */
 
-footer{
-    text-align:center;
-    padding:30px;
-    border-top:1px solid var(--border);
-    color:var(--muted);
+.reels-container{
+    display:flex;
+    gap:20px;
+    overflow-x:auto;
 }
 
-/* =========================
+.reel-card{
+    min-width:320px;
+
+    background:var(--card);
+
+    border-radius:20px;
+
+    overflow:hidden;
+}
+
+.reel-card video{
+    width:100%;
+    height:550px;
+    object-fit:cover;
+}
+
+.reel-card h3{
+    padding:15px;
+    text-align:center;
+}
+
+/* ==================================
+   PROFILE PAGE
+================================== */
+
+.profile-page{
+    display:flex;
+    align-items:center;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+.profile-large{
+    width:220px;
+    height:220px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+}
+
+.profile-info{
+    flex:1;
+}
+
+.profile-info h3{
+    margin-bottom:15px;
+}
+
+.profile-info p{
+    color:#ddd;
+    line-height:1.8;
+}
+
+/* ==================================
+   CONTACT FORM
+================================== */
+
+form{
+    max-width:700px;
+    margin:auto;
+
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+form input,
+form textarea{
+    padding:15px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#222;
+
+    color:white;
+}
+
+form button{
+    background:var(--accent);
+
+    border:none;
+
+    color:white;
+
+    padding:15px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+}
+
+/* ==================================
+   NEWSLETTER
+================================== */
+
+.newsletter{
+    text-align:center;
+    padding:80px 20px;
+
+    background:#151515;
+}
+
+.newsletter h2{
+    margin-bottom:20px;
+}
+
+.newsletter p{
+    color:#ccc;
+    margin-bottom:25px;
+}
+
+.newsletter-box{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+.newsletter-box input{
+    width:350px;
+    max-width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:10px;
+}
+
+.newsletter-box button{
+    padding:15px 25px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:var(--accent);
+
+    color:white;
+}
+
+/* ==================================
+   FOOTER
+================================== */
+
+footer{
+    background:#000;
+    padding:60px 40px;
+}
+
+.footer-content{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:30px;
+}
+
+.footer-content h3{
+    margin-bottom:15px;
+}
+
+.footer-content ul{
+    list-style:none;
+}
+
+.footer-content li{
+    margin-bottom:10px;
+}
+
+.footer-content a{
+    color:#ddd;
+    text-decoration:none;
+}
+
+.social-icons{
+    display:flex;
+    gap:15px;
+}
+
+.social-icons a{
+    color:white;
+    font-size:22px;
+}
+
+footer hr{
+    margin:30px 0;
+    border-color:#222;
+}
+
+.copyright{
+    text-align:center;
+    color:#888;
+}
+
+/* ==================================
    MOBILE
-========================= */
+================================== */
 
 @media(max-width:992px){
 
@@ -326,6 +586,10 @@ footer{
 .sidebar{
     position:relative;
     top:auto;
+}
+
+.hero h1{
+    font-size:40px;
 }
 
 }
@@ -339,31 +603,19 @@ footer{
 
 .search-box{
     width:100%;
-    margin:0;
 }
 
 .nav-icons{
-    width:100%;
     justify-content:center;
 }
 
-.gallery-grid{
-    grid-template-columns:1fr;
+.hero h1{
+    font-size:32px;
 }
 
+.profile-page{
+    text-align:center;
+    justify-content:center;
 }
 
-/* new */
-
-.page-section{
-    padding:80px 40px;
-}
-
-.nav-icons a{
-    color:white;
-    text-decoration:none;
-}
-
-.nav-icons a:hover{
-    color:#ff4d6d;
 }
