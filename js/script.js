@@ -1,501 +1,362 @@
-document.addEventListener('DOMContentLoaded',()=>{console.log('Gallery Loaded');});
-function feature1(){return 'feature1';}
-function feature2(){return 'feature2';}
-function feature3(){return 'feature3';}
-function feature4(){return 'feature4';}
-function feature5(){return 'feature5';}
-function feature6(){return 'feature6';}
-function feature7(){return 'feature7';}
-function feature8(){return 'feature8';}
-function feature9(){return 'feature9';}
-function feature10(){return 'feature10';}
-function feature11(){return 'feature11';}
-function feature12(){return 'feature12';}
-function feature13(){return 'feature13';}
-function feature14(){return 'feature14';}
-function feature15(){return 'feature15';}
-function feature16(){return 'feature16';}
-function feature17(){return 'feature17';}
-function feature18(){return 'feature18';}
-function feature19(){return 'feature19';}
-function feature20(){return 'feature20';}
-function feature21(){return 'feature21';}
-function feature22(){return 'feature22';}
-function feature23(){return 'feature23';}
-function feature24(){return 'feature24';}
-function feature25(){return 'feature25';}
-function feature26(){return 'feature26';}
-function feature27(){return 'feature27';}
-function feature28(){return 'feature28';}
-function feature29(){return 'feature29';}
-function feature30(){return 'feature30';}
-function feature31(){return 'feature31';}
-function feature32(){return 'feature32';}
-function feature33(){return 'feature33';}
-function feature34(){return 'feature34';}
-function feature35(){return 'feature35';}
-function feature36(){return 'feature36';}
-function feature37(){return 'feature37';}
-function feature38(){return 'feature38';}
-function feature39(){return 'feature39';}
-function feature40(){return 'feature40';}
-function feature41(){return 'feature41';}
-function feature42(){return 'feature42';}
-function feature43(){return 'feature43';}
-function feature44(){return 'feature44';}
-function feature45(){return 'feature45';}
-function feature46(){return 'feature46';}
-function feature47(){return 'feature47';}
-function feature48(){return 'feature48';}
-function feature49(){return 'feature49';}
-function feature50(){return 'feature50';}
-function feature51(){return 'feature51';}
-function feature52(){return 'feature52';}
-function feature53(){return 'feature53';}
-function feature54(){return 'feature54';}
-function feature55(){return 'feature55';}
-function feature56(){return 'feature56';}
-function feature57(){return 'feature57';}
-function feature58(){return 'feature58';}
-function feature59(){return 'feature59';}
-function feature60(){return 'feature60';}
-function feature61(){return 'feature61';}
-function feature62(){return 'feature62';}
-function feature63(){return 'feature63';}
-function feature64(){return 'feature64';}
-function feature65(){return 'feature65';}
-function feature66(){return 'feature66';}
-function feature67(){return 'feature67';}
-function feature68(){return 'feature68';}
-function feature69(){return 'feature69';}
-function feature70(){return 'feature70';}
-function feature71(){return 'feature71';}
-function feature72(){return 'feature72';}
-function feature73(){return 'feature73';}
-function feature74(){return 'feature74';}
-function feature75(){return 'feature75';}
-function feature76(){return 'feature76';}
-function feature77(){return 'feature77';}
-function feature78(){return 'feature78';}
-function feature79(){return 'feature79';}
-function feature80(){return 'feature80';}
-function feature81(){return 'feature81';}
-function feature82(){return 'feature82';}
-function feature83(){return 'feature83';}
-function feature84(){return 'feature84';}
-function feature85(){return 'feature85';}
-function feature86(){return 'feature86';}
-function feature87(){return 'feature87';}
-function feature88(){return 'feature88';}
-function feature89(){return 'feature89';}
-function feature90(){return 'feature90';}
-function feature91(){return 'feature91';}
-function feature92(){return 'feature92';}
-function feature93(){return 'feature93';}
-function feature94(){return 'feature94';}
-function feature95(){return 'feature95';}
-function feature96(){return 'feature96';}
-function feature97(){return 'feature97';}
-function feature98(){return 'feature98';}
-function feature99(){return 'feature99';}
-function feature100(){return 'feature100';}
-function feature101(){return 'feature101';}
-function feature102(){return 'feature102';}
-function feature103(){return 'feature103';}
-function feature104(){return 'feature104';}
-function feature105(){return 'feature105';}
-function feature106(){return 'feature106';}
-function feature107(){return 'feature107';}
-function feature108(){return 'feature108';}
-function feature109(){return 'feature109';}
-function feature110(){return 'feature110';}
-function feature111(){return 'feature111';}
-function feature112(){return 'feature112';}
-function feature113(){return 'feature113';}
-function feature114(){return 'feature114';}
-function feature115(){return 'feature115';}
-function feature116(){return 'feature116';}
-function feature117(){return 'feature117';}
-function feature118(){return 'feature118';}
-function feature119(){return 'feature119';}
-function feature120(){return 'feature120';}
-function feature121(){return 'feature121';}
-function feature122(){return 'feature122';}
-function feature123(){return 'feature123';}
-function feature124(){return 'feature124';}
-function feature125(){return 'feature125';}
-function feature126(){return 'feature126';}
-function feature127(){return 'feature127';}
-function feature128(){return 'feature128';}
-function feature129(){return 'feature129';}
-function feature130(){return 'feature130';}
-function feature131(){return 'feature131';}
-function feature132(){return 'feature132';}
-function feature133(){return 'feature133';}
-function feature134(){return 'feature134';}
-function feature135(){return 'feature135';}
-function feature136(){return 'feature136';}
-function feature137(){return 'feature137';}
-function feature138(){return 'feature138';}
-function feature139(){return 'feature139';}
-function feature140(){return 'feature140';}
-function feature141(){return 'feature141';}
-function feature142(){return 'feature142';}
-function feature143(){return 'feature143';}
-function feature144(){return 'feature144';}
-function feature145(){return 'feature145';}
-function feature146(){return 'feature146';}
-function feature147(){return 'feature147';}
-function feature148(){return 'feature148';}
-function feature149(){return 'feature149';}
-function feature150(){return 'feature150';}
-function feature151(){return 'feature151';}
-function feature152(){return 'feature152';}
-function feature153(){return 'feature153';}
-function feature154(){return 'feature154';}
-function feature155(){return 'feature155';}
-function feature156(){return 'feature156';}
-function feature157(){return 'feature157';}
-function feature158(){return 'feature158';}
-function feature159(){return 'feature159';}
-function feature160(){return 'feature160';}
-function feature161(){return 'feature161';}
-function feature162(){return 'feature162';}
-function feature163(){return 'feature163';}
-function feature164(){return 'feature164';}
-function feature165(){return 'feature165';}
-function feature166(){return 'feature166';}
-function feature167(){return 'feature167';}
-function feature168(){return 'feature168';}
-function feature169(){return 'feature169';}
-function feature170(){return 'feature170';}
-function feature171(){return 'feature171';}
-function feature172(){return 'feature172';}
-function feature173(){return 'feature173';}
-function feature174(){return 'feature174';}
-function feature175(){return 'feature175';}
-function feature176(){return 'feature176';}
-function feature177(){return 'feature177';}
-function feature178(){return 'feature178';}
-function feature179(){return 'feature179';}
-function feature180(){return 'feature180';}
-function feature181(){return 'feature181';}
-function feature182(){return 'feature182';}
-function feature183(){return 'feature183';}
-function feature184(){return 'feature184';}
-function feature185(){return 'feature185';}
-function feature186(){return 'feature186';}
-function feature187(){return 'feature187';}
-function feature188(){return 'feature188';}
-function feature189(){return 'feature189';}
-function feature190(){return 'feature190';}
-function feature191(){return 'feature191';}
-function feature192(){return 'feature192';}
-function feature193(){return 'feature193';}
-function feature194(){return 'feature194';}
-function feature195(){return 'feature195';}
-function feature196(){return 'feature196';}
-function feature197(){return 'feature197';}
-function feature198(){return 'feature198';}
-function feature199(){return 'feature199';}
-function feature200(){return 'feature200';}
-function feature201(){return 'feature201';}
-function feature202(){return 'feature202';}
-function feature203(){return 'feature203';}
-function feature204(){return 'feature204';}
-function feature205(){return 'feature205';}
-function feature206(){return 'feature206';}
-function feature207(){return 'feature207';}
-function feature208(){return 'feature208';}
-function feature209(){return 'feature209';}
-function feature210(){return 'feature210';}
-function feature211(){return 'feature211';}
-function feature212(){return 'feature212';}
-function feature213(){return 'feature213';}
-function feature214(){return 'feature214';}
-function feature215(){return 'feature215';}
-function feature216(){return 'feature216';}
-function feature217(){return 'feature217';}
-function feature218(){return 'feature218';}
-function feature219(){return 'feature219';}
-function feature220(){return 'feature220';}
-function feature221(){return 'feature221';}
-function feature222(){return 'feature222';}
-function feature223(){return 'feature223';}
-function feature224(){return 'feature224';}
-function feature225(){return 'feature225';}
-function feature226(){return 'feature226';}
-function feature227(){return 'feature227';}
-function feature228(){return 'feature228';}
-function feature229(){return 'feature229';}
-function feature230(){return 'feature230';}
-function feature231(){return 'feature231';}
-function feature232(){return 'feature232';}
-function feature233(){return 'feature233';}
-function feature234(){return 'feature234';}
-function feature235(){return 'feature235';}
-function feature236(){return 'feature236';}
-function feature237(){return 'feature237';}
-function feature238(){return 'feature238';}
-function feature239(){return 'feature239';}
-function feature240(){return 'feature240';}
-function feature241(){return 'feature241';}
-function feature242(){return 'feature242';}
-function feature243(){return 'feature243';}
-function feature244(){return 'feature244';}
-function feature245(){return 'feature245';}
-function feature246(){return 'feature246';}
-function feature247(){return 'feature247';}
-function feature248(){return 'feature248';}
-function feature249(){return 'feature249';}
-function feature250(){return 'feature250';}
-function feature251(){return 'feature251';}
-function feature252(){return 'feature252';}
-function feature253(){return 'feature253';}
-function feature254(){return 'feature254';}
-function feature255(){return 'feature255';}
-function feature256(){return 'feature256';}
-function feature257(){return 'feature257';}
-function feature258(){return 'feature258';}
-function feature259(){return 'feature259';}
-function feature260(){return 'feature260';}
-function feature261(){return 'feature261';}
-function feature262(){return 'feature262';}
-function feature263(){return 'feature263';}
-function feature264(){return 'feature264';}
-function feature265(){return 'feature265';}
-function feature266(){return 'feature266';}
-function feature267(){return 'feature267';}
-function feature268(){return 'feature268';}
-function feature269(){return 'feature269';}
-function feature270(){return 'feature270';}
-function feature271(){return 'feature271';}
-function feature272(){return 'feature272';}
-function feature273(){return 'feature273';}
-function feature274(){return 'feature274';}
-function feature275(){return 'feature275';}
-function feature276(){return 'feature276';}
-function feature277(){return 'feature277';}
-function feature278(){return 'feature278';}
-function feature279(){return 'feature279';}
-function feature280(){return 'feature280';}
-function feature281(){return 'feature281';}
-function feature282(){return 'feature282';}
-function feature283(){return 'feature283';}
-function feature284(){return 'feature284';}
-function feature285(){return 'feature285';}
-function feature286(){return 'feature286';}
-function feature287(){return 'feature287';}
-function feature288(){return 'feature288';}
-function feature289(){return 'feature289';}
-function feature290(){return 'feature290';}
-function feature291(){return 'feature291';}
-function feature292(){return 'feature292';}
-function feature293(){return 'feature293';}
-function feature294(){return 'feature294';}
-function feature295(){return 'feature295';}
-function feature296(){return 'feature296';}
-function feature297(){return 'feature297';}
-function feature298(){return 'feature298';}
-function feature299(){return 'feature299';}
-function feature300(){return 'feature300';}
-function feature301(){return 'feature301';}
-function feature302(){return 'feature302';}
-function feature303(){return 'feature303';}
-function feature304(){return 'feature304';}
-function feature305(){return 'feature305';}
-function feature306(){return 'feature306';}
-function feature307(){return 'feature307';}
-function feature308(){return 'feature308';}
-function feature309(){return 'feature309';}
-function feature310(){return 'feature310';}
-function feature311(){return 'feature311';}
-function feature312(){return 'feature312';}
-function feature313(){return 'feature313';}
-function feature314(){return 'feature314';}
-function feature315(){return 'feature315';}
-function feature316(){return 'feature316';}
-function feature317(){return 'feature317';}
-function feature318(){return 'feature318';}
-function feature319(){return 'feature319';}
-function feature320(){return 'feature320';}
-function feature321(){return 'feature321';}
-function feature322(){return 'feature322';}
-function feature323(){return 'feature323';}
-function feature324(){return 'feature324';}
-function feature325(){return 'feature325';}
-function feature326(){return 'feature326';}
-function feature327(){return 'feature327';}
-function feature328(){return 'feature328';}
-function feature329(){return 'feature329';}
-function feature330(){return 'feature330';}
-function feature331(){return 'feature331';}
-function feature332(){return 'feature332';}
-function feature333(){return 'feature333';}
-function feature334(){return 'feature334';}
-function feature335(){return 'feature335';}
-function feature336(){return 'feature336';}
-function feature337(){return 'feature337';}
-function feature338(){return 'feature338';}
-function feature339(){return 'feature339';}
-function feature340(){return 'feature340';}
-function feature341(){return 'feature341';}
-function feature342(){return 'feature342';}
-function feature343(){return 'feature343';}
-function feature344(){return 'feature344';}
-function feature345(){return 'feature345';}
-function feature346(){return 'feature346';}
-function feature347(){return 'feature347';}
-function feature348(){return 'feature348';}
-function feature349(){return 'feature349';}
-function feature350(){return 'feature350';}
-function feature351(){return 'feature351';}
-function feature352(){return 'feature352';}
-function feature353(){return 'feature353';}
-function feature354(){return 'feature354';}
-function feature355(){return 'feature355';}
-function feature356(){return 'feature356';}
-function feature357(){return 'feature357';}
-function feature358(){return 'feature358';}
-function feature359(){return 'feature359';}
-function feature360(){return 'feature360';}
-function feature361(){return 'feature361';}
-function feature362(){return 'feature362';}
-function feature363(){return 'feature363';}
-function feature364(){return 'feature364';}
-function feature365(){return 'feature365';}
-function feature366(){return 'feature366';}
-function feature367(){return 'feature367';}
-function feature368(){return 'feature368';}
-function feature369(){return 'feature369';}
-function feature370(){return 'feature370';}
-function feature371(){return 'feature371';}
-function feature372(){return 'feature372';}
-function feature373(){return 'feature373';}
-function feature374(){return 'feature374';}
-function feature375(){return 'feature375';}
-function feature376(){return 'feature376';}
-function feature377(){return 'feature377';}
-function feature378(){return 'feature378';}
-function feature379(){return 'feature379';}
-function feature380(){return 'feature380';}
-function feature381(){return 'feature381';}
-function feature382(){return 'feature382';}
-function feature383(){return 'feature383';}
-function feature384(){return 'feature384';}
-function feature385(){return 'feature385';}
-function feature386(){return 'feature386';}
-function feature387(){return 'feature387';}
-function feature388(){return 'feature388';}
-function feature389(){return 'feature389';}
-function feature390(){return 'feature390';}
-function feature391(){return 'feature391';}
-function feature392(){return 'feature392';}
-function feature393(){return 'feature393';}
-function feature394(){return 'feature394';}
-function feature395(){return 'feature395';}
-function feature396(){return 'feature396';}
-function feature397(){return 'feature397';}
-function feature398(){return 'feature398';}
-function feature399(){return 'feature399';}
-function feature400(){return 'feature400';}
-function feature401(){return 'feature401';}
-function feature402(){return 'feature402';}
-function feature403(){return 'feature403';}
-function feature404(){return 'feature404';}
-function feature405(){return 'feature405';}
-function feature406(){return 'feature406';}
-function feature407(){return 'feature407';}
-function feature408(){return 'feature408';}
-function feature409(){return 'feature409';}
-function feature410(){return 'feature410';}
-function feature411(){return 'feature411';}
-function feature412(){return 'feature412';}
-function feature413(){return 'feature413';}
-function feature414(){return 'feature414';}
-function feature415(){return 'feature415';}
-function feature416(){return 'feature416';}
-function feature417(){return 'feature417';}
-function feature418(){return 'feature418';}
-function feature419(){return 'feature419';}
-function feature420(){return 'feature420';}
-function feature421(){return 'feature421';}
-function feature422(){return 'feature422';}
-function feature423(){return 'feature423';}
-function feature424(){return 'feature424';}
-function feature425(){return 'feature425';}
-function feature426(){return 'feature426';}
-function feature427(){return 'feature427';}
-function feature428(){return 'feature428';}
-function feature429(){return 'feature429';}
-function feature430(){return 'feature430';}
-function feature431(){return 'feature431';}
-function feature432(){return 'feature432';}
-function feature433(){return 'feature433';}
-function feature434(){return 'feature434';}
-function feature435(){return 'feature435';}
-function feature436(){return 'feature436';}
-function feature437(){return 'feature437';}
-function feature438(){return 'feature438';}
-function feature439(){return 'feature439';}
-function feature440(){return 'feature440';}
-function feature441(){return 'feature441';}
-function feature442(){return 'feature442';}
-function feature443(){return 'feature443';}
-function feature444(){return 'feature444';}
-function feature445(){return 'feature445';}
-function feature446(){return 'feature446';}
-function feature447(){return 'feature447';}
-function feature448(){return 'feature448';}
-function feature449(){return 'feature449';}
-function feature450(){return 'feature450';}
-function feature451(){return 'feature451';}
-function feature452(){return 'feature452';}
-function feature453(){return 'feature453';}
-function feature454(){return 'feature454';}
-function feature455(){return 'feature455';}
-function feature456(){return 'feature456';}
-function feature457(){return 'feature457';}
-function feature458(){return 'feature458';}
-function feature459(){return 'feature459';}
-function feature460(){return 'feature460';}
-function feature461(){return 'feature461';}
-function feature462(){return 'feature462';}
-function feature463(){return 'feature463';}
-function feature464(){return 'feature464';}
-function feature465(){return 'feature465';}
-function feature466(){return 'feature466';}
-function feature467(){return 'feature467';}
-function feature468(){return 'feature468';}
-function feature469(){return 'feature469';}
-function feature470(){return 'feature470';}
-function feature471(){return 'feature471';}
-function feature472(){return 'feature472';}
-function feature473(){return 'feature473';}
-function feature474(){return 'feature474';}
-function feature475(){return 'feature475';}
-function feature476(){return 'feature476';}
-function feature477(){return 'feature477';}
-function feature478(){return 'feature478';}
-function feature479(){return 'feature479';}
-function feature480(){return 'feature480';}
-function feature481(){return 'feature481';}
-function feature482(){return 'feature482';}
-function feature483(){return 'feature483';}
-function feature484(){return 'feature484';}
-function feature485(){return 'feature485';}
-function feature486(){return 'feature486';}
-function feature487(){return 'feature487';}
-function feature488(){return 'feature488';}
-function feature489(){return 'feature489';}
-function feature490(){return 'feature490';}
-function feature491(){return 'feature491';}
-function feature492(){return 'feature492';}
-function feature493(){return 'feature493';}
-function feature494(){return 'feature494';}
-function feature495(){return 'feature495';}
-function feature496(){return 'feature496';}
-function feature497(){return 'feature497';}
-function feature498(){return 'feature498';}
-function feature499(){return 'feature499';}
-function feature500(){return 'feature500';}
+```javascript id="m8y8kv"
+/* ==========================
+   LIKE BUTTON
+========================== */
+
+const likeButtons = document.querySelectorAll(".like-btn");
+
+likeButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        const icon = button.querySelector("i");
+
+        if(icon.classList.contains("far")){
+
+            icon.classList.remove("far");
+            icon.classList.add("fas");
+
+            button.style.color = "#ff4d6d";
+
+        }else{
+
+            icon.classList.remove("fas");
+            icon.classList.add("far");
+
+            button.style.color = "white";
+        }
+
+    });
+
+});
+
+/* ==========================
+   SEARCH FILTER
+========================== */
+
+const searchInput = document.querySelector(".search-box input");
+
+if(searchInput){
+
+searchInput.addEventListener("keyup", () => {
+
+    const value = searchInput.value.toLowerCase();
+
+    const posts = document.querySelectorAll(".post");
+
+    posts.forEach(post => {
+
+        const text =
+        post.innerText.toLowerCase();
+
+        if(text.includes(value)){
+            post.style.display = "block";
+        }else{
+            post.style.display = "none";
+        }
+
+    });
+
+});
+
+}
+
+/* ==========================
+   SMOOTH SCROLL
+========================== */
+
+document
+.querySelectorAll('a[href^="#"]')
+.forEach(anchor => {
+
+anchor.addEventListener("click", function(e){
+
+    e.preventDefault();
+
+    const target =
+    document.querySelector(
+        this.getAttribute("href")
+    );
+
+    if(target){
+
+        target.scrollIntoView({
+            behavior:"smooth"
+        });
+
+    }
+
+});
+
+});
+
+/* ==========================
+   IMAGE LIGHTBOX
+========================== */
+
+const images =
+document.querySelectorAll(
+'.gallery-grid img, .post-image'
+);
+
+const lightbox =
+document.createElement("div");
+
+lightbox.id = "lightbox";
+
+lightbox.innerHTML = `
+<img id="lightbox-img">
+`;
+
+document.body.appendChild(lightbox);
+
+images.forEach(image => {
+
+image.addEventListener("click", () => {
+
+    lightbox.classList.add("active");
+
+    document
+    .getElementById("lightbox-img")
+    .src = image.src;
+
+});
+
+});
+
+lightbox.addEventListener("click", () => {
+
+    lightbox.classList.remove("active");
+
+});
+
+/* ==========================
+   LIGHTBOX STYLE
+========================== */
+
+const style =
+document.createElement("style");
+
+style.innerHTML = `
+
+#lightbox{
+
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.95);
+
+display:none;
+
+justify-content:center;
+align-items:center;
+
+z-index:99999;
+
+}
+
+#lightbox.active{
+display:flex;
+}
+
+#lightbox img{
+
+max-width:90%;
+max-height:90%;
+border-radius:15px;
+
+}
+
+`;
+
+document.head.appendChild(style);
+
+/* ==========================
+   FADE-IN ANIMATION
+========================== */
+
+const observer =
+new IntersectionObserver(entries => {
+
+entries.forEach(entry => {
+
+    if(entry.isIntersecting){
+
+        entry.target.style.opacity = 1;
+
+        entry.target.style.transform =
+        "translateY(0px)";
+    }
+
+});
+
+});
+
+const animateItems =
+document.querySelectorAll(
+'.post, .artist-card, .gallery-grid img'
+);
+
+animateItems.forEach(item => {
+
+item.style.opacity = 0;
+
+item.style.transform =
+'translateY(40px)';
+
+item.style.transition =
+'all .8s ease';
+
+observer.observe(item);
+
+});
+
+/* ==========================
+   STATS COUNTER
+========================== */
+
+const counters =
+document.querySelectorAll(".stats h3");
+
+counters.forEach(counter => {
+
+const target =
+parseInt(
+counter.innerText.replace(/\D/g,'')
+);
+
+if(!target) return;
+
+let current = 0;
+
+const update = () => {
+
+current += Math.ceil(target/100);
+
+if(current > target){
+
+current = target;
+
+}
+
+counter.innerText = current;
+
+if(current < target){
+
+requestAnimationFrame(update);
+
+}
+
+};
+
+update();
+
+});
+
+/* ==========================
+   STORY HOVER EFFECT
+========================== */
+
+const stories =
+document.querySelectorAll(".story");
+
+stories.forEach(story => {
+
+story.addEventListener("mouseenter", () => {
+
+story.style.transform =
+"scale(1.08)";
+
+story.style.transition =
+".3s";
+
+});
+
+story.addEventListener("mouseleave", () => {
+
+story.style.transform =
+"scale(1)";
+
+});
+
+});
+
+/* ==========================
+   FOLLOW BUTTON
+========================== */
+
+const followBtn =
+document.querySelector(".follow-btn");
+
+if(followBtn){
+
+followBtn.addEventListener("click", () => {
+
+if(followBtn.innerText === "Follow"){
+
+followBtn.innerText =
+"Following";
+
+followBtn.style.background =
+"#22c55e";
+
+}else{
+
+followBtn.innerText =
+"Follow";
+
+followBtn.style.background =
+"#ff4d6d";
+
+}
+
+});
+
+}
+
+/* ==========================
+   REEL AUTOPLAY ON VIEW
+========================== */
+
+const videos =
+document.querySelectorAll("video");
+
+const videoObserver =
+new IntersectionObserver(entries => {
+
+entries.forEach(entry => {
+
+if(entry.isIntersecting){
+
+entry.target.play();
+
+}else{
+
+entry.target.pause();
+
+}
+
+});
+
+},{threshold:.5});
+
+videos.forEach(video => {
+
+videoObserver.observe(video);
+
+});
+
+/* ==========================
+   PAGE LOADED
+========================== */
+
+window.addEventListener("load", () => {
+
+console.log(
+"ArtGram Loaded Successfully"
+);
+
+});
+```
