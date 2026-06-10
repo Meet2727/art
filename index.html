@@ -1,10 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ArtGram - Art Gallery Social Platform</title>
+
+<title>ArtGram - Instagram Style Art Gallery</title>
 
 <link rel="stylesheet" href="css/style.css">
 
@@ -12,72 +12,127 @@
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 </head>
+
 <body>
+
+<!-- ==========================
+     HEADER
+========================== -->
 
 <header class="topbar">
 
-    <div class="logo">
-        ArtGram
-    </div>
+<div class="logo">
+ArtGram
+</div>
 
-    <div class="search-box">
-        <input type="text" placeholder="Search artwork...">
-    </div>
+<div class="search-box">
+<input type="text" placeholder="Search artwork, artist, reels...">
+</div>
 
-    
 <div class="nav-icons">
 
 <a href="#home">
-    <i class="fas fa-home"></i>
+<i class="fas fa-home"></i>
 </a>
 
 <a href="#explore">
-    <i class="fas fa-compass"></i>
+<i class="fas fa-compass"></i>
+</a>
+
+<a href="#reels">
+<i class="fas fa-video"></i>
 </a>
 
 <a href="#likes">
-    <i class="fas fa-heart"></i>
+<i class="fas fa-heart"></i>
 </a>
 
 <a href="#profile">
-    <i class="fas fa-user"></i>
+<i class="fas fa-user"></i>
 </a>
 
 </div>
 
-
 </header>
 
-<section class="stories">
+<!-- ==========================
+     HERO
+========================== -->
 
-    <div class="story">
-        <img src="assets/images/story1.jpg">
-        <span>Emma</span>
-    </div>
+<section id="home" class="hero">
 
-    <div class="story">
-        <img src="assets/images/story2.jpg">
-        <span>John</span>
-    </div>
+<div class="hero-content">
 
-    <div class="story">
-        <img src="assets/images/story3.jpg">
-        <span>Sophia</span>
-    </div>
+<h1>
+Discover Amazing Art
+</h1>
 
-    <div class="story">
-        <img src="assets/images/story4.jpg">
-        <span>Alex</span>
-    </div>
+<p>
+Explore paintings, photography,
+digital art and video reels from
+artists around the world.
+</p>
 
-    <div class="story">
-        <img src="assets/images/story5.jpg">
-        <span>Olivia</span>
-    </div>
+<a href="#explore" class="hero-btn">
+Explore Collection
+</a>
+
+</div>
 
 </section>
 
+<!-- ==========================
+     STORIES
+========================== -->
+
+<section class="stories">
+
+<div class="story">
+<img src="assets/images/story1.jpg">
+<span>Emma</span>
+</div>
+
+<div class="story">
+<img src="assets/images/story2.jpg">
+<span>John</span>
+</div>
+
+<div class="story">
+<img src="assets/images/story3.jpg">
+<span>Sophia</span>
+</div>
+
+<div class="story">
+<img src="assets/images/story4.jpg">
+<span>Alex</span>
+</div>
+
+<div class="story">
+<img src="assets/images/story5.jpg">
+<span>Olivia</span>
+</div>
+
+<div class="story">
+<img src="assets/images/story6.jpg">
+<span>Lucas</span>
+</div>
+
+<div class="story">
+<img src="assets/images/story7.jpg">
+<span>Ella</span>
+</div>
+
+</section>
+
+<!-- ==========================
+     MAIN CONTENT
+========================== -->
+
 <main class="container">
+
+<!-- ==========================
+     FEED
+========================== -->
 
 <section class="feed">
 
@@ -90,8 +145,11 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 <img src="assets/images/profile1.jpg">
 
 <div>
+
 <h4>Emma Art Studio</h4>
+
 <p>Ahmedabad, India</p>
+
 </div>
 
 </div>
@@ -120,8 +178,12 @@ Share
 </div>
 
 <div class="caption">
+
 <strong>Emma Art Studio</strong>
-Abstract painting collection 2026.
+
+Abstract acrylic artwork inspired by
+modern architecture.
+
 </div>
 
 </div>
@@ -135,8 +197,11 @@ Abstract painting collection 2026.
 <img src="assets/images/profile2.jpg">
 
 <div>
+
 <h4>Michael Lee</h4>
+
 <p>London</p>
+
 </div>
 
 </div>
@@ -165,8 +230,11 @@ Share
 </div>
 
 <div class="caption">
+
 <strong>Michael Lee</strong>
-Digital surreal artwork.
+
+Digital surrealism collection 2026.
+
 </div>
 
 </div>
@@ -180,8 +248,11 @@ Digital surreal artwork.
 <img src="assets/images/profile3.jpg">
 
 <div>
+
 <h4>Sophia Arts</h4>
+
 <p>Paris</p>
+
 </div>
 
 </div>
@@ -210,26 +281,88 @@ Share
 </div>
 
 <div class="caption">
+
 <strong>Sophia Arts</strong>
+
 Landscape photography series.
+
+</div>
+
+</div>
+
+    <!-- ==========================
+     POST 4
+========================== -->
+
+<div class="post">
+
+<div class="post-header">
+
+<img src="assets/images/profile4.jpg">
+
+<div>
+<h4>Alex Creative</h4>
+<p>New York</p>
+</div>
+
+</div>
+
+<img
+class="post-image"
+src="assets/images/art4.jpg">
+
+<div class="actions">
+
+<button class="like-btn">
+<i class="far fa-heart"></i>
+Like
+</button>
+
+<button>
+<i class="far fa-comment"></i>
+Comment
+</button>
+
+<button>
+<i class="far fa-paper-plane"></i>
+Share
+</button>
+
+</div>
+
+<div class="caption">
+
+<strong>Alex Creative</strong>
+
+Modern geometric artwork collection.
+
 </div>
 
 </div>
 
 </section>
 
+<!-- ==========================
+     SIDEBAR
+========================== -->
+
 <aside class="sidebar">
 
 <div class="profile-card">
 
-<img src="assets/images/profile-main.jpg">
+<img
+src="assets/images/profile-main.jpg">
 
 <h3>Your Gallery</h3>
 
 <p>Artist & Creator</p>
 
-<button class="follow-btn">
+<button
+class="follow-btn"
+id="editProfileBtn">
+
 Edit Profile
+
 </button>
 
 </div>
@@ -242,7 +375,7 @@ Edit Profile
 </div>
 
 <div>
-<h3>12k</h3>
+<h3>12K</h3>
 <p>Followers</p>
 </div>
 
@@ -271,88 +404,340 @@ type="video/mp4">
 
 </main>
 
-<section class="gallery-section">
+<!-- ==========================
+     EXPLORE SECTION
+========================== -->
 
-<h2>Trending Artworks</h2>
-
-<div class="gallery-grid">
-
-<img src="assets/images/art1.jpg">
-<img src="assets/images/art2.jpg">
-<img src="assets/images/art3.jpg">
-<img src="assets/images/art4.jpg">
-<img src="assets/images/art5.jpg">
-<img src="assets/images/art6.jpg">
-<img src="assets/images/art7.jpg">
-<img src="assets/images/art8.jpg">
-
-</div>
-
-</section>
-
-<!-- New -->
-    
-<section id="explore" class="page-section">
+<section
+id="explore"
+class="page-section">
 
 <h2>Explore Art</h2>
 
 <div class="gallery-grid">
 
 <img src="assets/images/art1.jpg">
+
 <img src="assets/images/art2.jpg">
+
 <img src="assets/images/art3.jpg">
+
 <img src="assets/images/art4.jpg">
-<img src="assets/images/art1.jpg">
-<img src="assets/images/art2.jpg">
-<img src="assets/images/art3.jpg">
-<img src="assets/images/art4.jpg">
+
 <img src="assets/images/art5.jpg">
+
 <img src="assets/images/art6.jpg">
+
 <img src="assets/images/art7.jpg">
+
 <img src="assets/images/art8.jpg">
 
 </div>
 
 </section>
 
+<!-- ==========================
+     REELS SECTION
+========================== -->
 
-<section id="likes" class="page-section">
+<section
+id="reels"
+class="page-section">
 
-<h2>Liked Artworks</h2>
+<h2>Art Reels</h2>
 
-<p>Your favourite artworks will appear here.</p>
+<div class="reels-container">
+
+<div class="reel-card">
+
+<video
+controls
+loop
+muted>
+
+<source
+src="assets/videos/reel1.mp4"
+type="video/mp4">
+
+</video>
+
+<h3>
+Abstract Painting Process
+</h3>
+
+</div>
+
+<div class="reel-card">
+
+<video
+controls
+loop
+muted>
+
+<source
+src="assets/videos/reel2.mp4"
+type="video/mp4">
+
+</video>
+
+<h3>
+Digital Art Timelapse
+</h3>
+
+</div>
+
+<div class="reel-card">
+
+<video
+controls
+loop
+muted>
+
+<source
+src="assets/videos/reel3.mp4"
+type="video/mp4">
+
+</video>
+
+<h3>
+Photography Behind Scenes
+</h3>
+
+</div>
+
+</div>
 
 </section>
 
+<!-- ==========================
+     LIKES SECTION
+========================== -->
 
-<section id="profile" class="page-section">
+<section
+id="likes"
+class="page-section">
 
-<h2>Profile</h2>
+<h2>Liked Artworks</h2>
 
-<img src="assets/images/profile-main.jpg"
-width="150">
+<p>
+Your liked artworks will appear here.
+</p>
+
+<div class="gallery-grid">
+
+<img src="assets/images/art2.jpg">
+
+<img src="assets/images/art4.jpg">
+
+<img src="assets/images/art6.jpg">
+
+<img src="assets/images/art8.jpg">
+
+</div>
+
+</section>
+<!-- ==========================
+     PROFILE SECTION
+========================== -->
+
+<section
+id="profile"
+class="page-section">
+
+<h2>Artist Profile</h2>
+
+<div class="profile-page">
+
+<img
+src="assets/images/profile-main.jpg"
+class="profile-large">
+
+<div class="profile-info">
 
 <h3>Your Gallery</h3>
 
-<p>Artist & Creator</p>
+<p>
+Contemporary Artist • Photographer • Creator
+</p>
+
+<p>
+Welcome to my digital gallery where I
+share paintings, photography and
+creative visual stories.
+</p>
 
 <button id="editProfileBtn">
 Edit Profile
 </button>
 
+</div>
+
+</div>
+
 </section>
 
+<!-- ==========================
+     CONTACT SECTION
+========================== -->
+
+<section
+id="contact"
+class="page-section">
+
+<h2>Contact</h2>
+
+<form id="contactForm">
+
+<input
+type="text"
+placeholder="Your Name"
+required>
+
+<input
+type="email"
+placeholder="Email Address"
+required>
+
+<textarea
+placeholder="Message"
+rows="6"></textarea>
+
+<button type="submit">
+
+Send Message
+
+</button>
+
+</form>
+
+</section>
+
+<!-- ==========================
+     NEWSLETTER
+========================== -->
+
+<section class="newsletter">
+
+<h2>
+Subscribe for New Art Releases
+</h2>
+
+<p>
+Get updates on exhibitions,
+new collections and reels.
+</p>
+
+<div class="newsletter-box">
+
+<input
+type="email"
+placeholder="Enter your email">
+
+<button>
+Subscribe
+</button>
+
+</div>
+
+</section>
+
+<!-- ==========================
+     FOOTER
+========================== -->
 
 <footer>
 
+<div class="footer-content">
+
+<div>
+
+<h3>ArtGram</h3>
+
 <p>
-© 2026 ArtGram - Instagram Style Art Gallery
+Instagram-style Art Gallery Platform
+for Artists & Creators.
+</p>
+
+</div>
+
+<div>
+
+<h3>Quick Links</h3>
+
+<ul>
+
+<li>
+<a href="#home">
+Home
+</a>
+</li>
+
+<li>
+<a href="#explore">
+Explore
+</a>
+</li>
+
+<li>
+<a href="#reels">
+Reels
+</a>
+</li>
+
+<li>
+<a href="#profile">
+Profile
+</a>
+</li>
+
+</ul>
+
+</div>
+
+<div>
+
+<h3>Follow Us</h3>
+
+<div class="social-icons">
+
+<a href="#">
+<i class="fab fa-instagram"></i>
+</a>
+
+<a href="#">
+<i class="fab fa-facebook"></i>
+</a>
+
+<a href="#">
+<i class="fab fa-youtube"></i>
+</a>
+
+<a href="#">
+<i class="fab fa-twitter"></i>
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<hr>
+
+<p class="copyright">
+
+© 2026 ArtGram.
+All Rights Reserved.
+
 </p>
 
 </footer>
+
+<!-- ==========================
+     SCRIPT
+========================== -->
 
 <script src="js/script.js"></script>
 
 </body>
 </html>
-
